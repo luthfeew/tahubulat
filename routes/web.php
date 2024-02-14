@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Home;
+use App\Livewire\Uncensor;
+use App\Livewire\Stats;
+use App\Livewire\Gachacalc;
+use App\Livewire\Settings;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', Home::class);
+Route::get('/uncensor', Uncensor::class);
+Route::get('/stats', Stats::class);
+Route::get('/gachacalc', Gachacalc::class);
+Route::get('/settings', Settings::class);
